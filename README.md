@@ -6,7 +6,7 @@ Polytech Nice Sophia
 
 Equipe de travail:
 - Alexis Defranoux
-- Rihab Zaafouri
+- Rihab Zaafouri <3 <3
 - Anthony Lopes
 
 ## Diagramme de GANTT
