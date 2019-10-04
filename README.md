@@ -18,7 +18,7 @@ La black fire box est un projet visant à protéger les pompiers. C'est un petit
 
 ## Visuel de l'objet
 
-??
+Work in progress
 
 ## Architecture matérielle
 
@@ -26,7 +26,7 @@ La black fire box est un projet visant à protéger les pompiers. C'est un petit
 
 ## Architecture logicielle
 
-??
+Work in progress
  
 ## Scénarios
 Voici des exemples de scénario possible avec des black fire box :
