@@ -14,11 +14,14 @@ La black fire box est un projet visant à protéger les pompiers. C'est un petit
 
 ## Diagramme de GANTT
 
-![](https://i.imgur.com/pJxk1Ln.png)
+![](https://i.imgur.com/JGRhCEe.png)
+
 
 ## Visuel de l'objet
 
-Work in progress
+![](https://i.imgur.com/FMSR8RV.jpg)
+
+Work in progress on **Solidworks**...
 
 ## Architecture matérielle
 
@@ -26,9 +29,16 @@ Work in progress
 
 ## Architecture logicielle
 
-Work in progress
+[Interface]->[API]->[GUI]
+
+Un système de publish/subscribe pour communiquer entre les black fire box. En REST?
+
+Chaque black fire box a une intelligence par défaut + une configuration.
+
+Work in progress...
  
 ## Scénarios
+
 Voici des exemples de scénario possible avec des black fire box :
 
 - Une fuite de gaz est présente dans le bâtiment. Cela menace les habitants et les pompiers lors de l'intervention des secours. En effet, il y a un risque d'explosion. Grâce à la black fire box porté dans une poche du pompier, l'appareil va détecter le gaz à l'aide de son capteur, puis va prévenir le pompier à l'aide d'une alerte sonore s'il n'y a pas trop de bruit, visuelle à l'aide d'une lumière, et une vibration.
@@ -42,12 +52,16 @@ Voici des exemples de scénario possible avec des black fire box :
 ## Capteurs et actionneurs
 
 ### Capteurs :
-- Détecteur de gaz
-- Thermomètre
+- Gaz
+- Thermique
 - Accéléromètre
-- Détecteur sonore
+- Sonore
 
 ### Actionneurs :
 - Lumières 
 - Vibreurs
 - Haut-parleurs
+
+----
+
+*Polytech Nice Sophia - Objets connectés et services - 2019/2020*
