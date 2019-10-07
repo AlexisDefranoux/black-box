@@ -1,7 +1,5 @@
 # Black Fire Box
 
-Polytech Nice Sophia - Objets connectés et services
-
 ## Introduction
 
 La black fire box est un projet visant à protéger les pompiers. C'est un petit boitier porté sur une poche extérieure de la tenue du pompier. Lorsqu'un boitier détecte un danger, elle va prévenir le pompier à l'aide d'alerte sonore, lumineux ou de vibration en fonction de l'environnement. Elle va aussi diffuser des alertes aux black fire box à proximité afin de parvenir les pompiers autour.
@@ -17,7 +15,7 @@ La black fire box est un projet visant à protéger les pompiers. C'est un petit
 ![](https://i.imgur.com/JGRhCEe.png)
 
 
-## Visuel de l'objet
+## Modélisation de l'objet
 
 ![](https://i.imgur.com/FMSR8RV.jpg)
 
