@@ -50,10 +50,11 @@ Voici des exemples de scénario possible avec des black fire box :
 ## Capteurs et actionneurs
 
 ### Capteurs :
-- Gaz
-- Thermique
+- Gaz : https://www.lextronic.fr/capteur-de-qualite-d-air-19455.html
+- Thermique :https://www.lextronic.fr/module-grove-capteur-de-temperature-28923.html
 - Accéléromètre
-- Sonore
+- Sonore : https://www.gotronic.fr/art-capteur-sonore-grove-101020063-20631.htm
+- Flammes: https://www.lextronic.fr/module-grove-capteur-de-flammes-20898.html
 
 ### Actionneurs :
 - Lumières 
