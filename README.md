@@ -23,7 +23,7 @@ Work in progress on **Solidworks**...
 
 ## Architecture matérielle
 
-![](https://i.imgur.com/cdPEDq3.png)
+![](https://i.imgur.com/SniWRkZ.png)
 
 ## Architecture logicielle
 
