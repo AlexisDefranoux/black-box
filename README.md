@@ -27,14 +27,8 @@ Work in progress on **Solidworks**...
 
 ## Architecture logicielle
 
-[Interface]->[API]->[GUI]
+![](https://i.imgur.com/nSk2Hos.png)
 
-Un système de publish/subscribe pour communiquer entre les black fire box. En REST?
-
-Chaque black fire box a une intelligence par défaut + une configuration.
-
-Work in progress...
- 
 ## Scénarios
 
 Voici des exemples de scénario possible avec des black fire box :
