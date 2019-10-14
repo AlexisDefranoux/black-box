@@ -17,7 +17,7 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ## Modélisation de l'objet
 
-![](https://i.imgur.com/FMSR8RV.jpg)
+![](https://i.imgur.com/ZTfQTC5.png)
 
 Work in progress on **Solidworks**...
 
