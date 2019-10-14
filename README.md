@@ -14,12 +14,9 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ![](https://i.imgur.com/JGRhCEe.png)
 
-
 ## Modélisation de l'objet
 
 ![](https://i.imgur.com/ZTfQTC5.png)
-
-Work in progress on **Solidworks**...
 
 ## Architecture matérielle
 
@@ -48,7 +45,7 @@ Voici des exemples de scénario possible avec des black box :
 - Thermique : https://www.lextronic.fr/module-grove-capteur-de-temperature-28923.html
 - Accéléromètre : https://www.lextronic.fr/module-gyro-accelerometre-6-axes-16917.html
 - Sonore : https://www.gotronic.fr/art-capteur-sonore-grove-101020063-20631.htm
-- GPS : ? 
+- GPS : ?  
 ~~- Flammes: https://www.lextronic.fr/module-grove-capteur-de-flammes-20898.html~~
 
 ### Actionneurs :
