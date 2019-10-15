@@ -24,7 +24,7 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ## Architecture logicielle
 
-![](https://i.imgur.com/UVRQS4L.png)
+![](https://i.imgur.com/YBcHXB2.png)
 
 ## Scénarios
 
