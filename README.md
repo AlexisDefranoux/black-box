@@ -45,8 +45,7 @@ Voici des exemples de scénario possible avec des black box :
 - Thermique : https://www.lextronic.fr/module-grove-capteur-de-temperature-28923.html
 - Accéléromètre : https://www.lextronic.fr/module-gyro-accelerometre-6-axes-16917.html
 - Sonore : https://www.gotronic.fr/art-capteur-sonore-grove-101020063-20631.htm
-- GPS : ?  
-~~- Flammes: https://www.lextronic.fr/module-grove-capteur-de-flammes-20898.html~~
+- GPS : ? 
 
 ### Actionneurs :
 - Lumières : https://www.gotronic.fr/art-led-8-mm-rgb-variable-grove-101020472-27991.htm
