@@ -41,16 +41,15 @@ Voici des exemples de scénario possible avec des black box :
 ## Capteurs et actionneurs
 
 ### Capteurs :
-- Gaz : https://www.lextronic.fr/capteur-de-qualite-d-air-19455.html
-- Thermique : https://www.lextronic.fr/module-grove-capteur-de-temperature-28923.html
-- Accéléromètre : https://www.lextronic.fr/module-gyro-accelerometre-6-axes-16917.html
-- Sonore : https://www.gotronic.fr/art-capteur-sonore-grove-101020063-20631.htm
-- GPS : ? 
+- Gaz, type analogique : https://www.lextronic.fr/capteur-de-qualite-d-air-19455.html
+- Thermique, type analogique: https://www.gotronic.fr/art-capteur-de-temperature-grove-101020015-18965.htm
+- Accéléromètre, type I2C: https://www.gotronic.fr/art-module-6-dof-grove-105020012-25135.htm
+- Sonore, type analogique : https://www.gotronic.fr/art-capteur-sonore-grove-101020063-20631.htm
 
 ### Actionneurs :
-- Lumières : https://www.gotronic.fr/art-led-8-mm-rgb-variable-grove-101020472-27991.htm
-- Vibreurs : https://www.gotronic.fr/art-module-vibreur-grove-105020003-19026.htm
-- Haut-parleurs : ?
+- Lumières, type digital : https://www.gotronic.fr/art-led-8-mm-rgb-variable-grove-101020472-27991.htm
+- Vibreurs, type digital : https://www.gotronic.fr/art-module-vibreur-grove-105020003-19026.htm
+- Haut-parleurs, type digital : https://www.gotronic.fr/art-capteur-de-temperature-grove-101020015-18965.htm
 
 ----
 
