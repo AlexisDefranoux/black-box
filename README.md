@@ -54,7 +54,7 @@ Voici des exemples de scénario possible avec des black box :
 ### Actionneurs :
 - Une Led 8 mm RGB Grove V2.0 104020048, type digital : https://www.gotronic.fr/art-led-8-mm-rgb-grove-v2-0-104020048-27067.htm
 - Un Module vibreur Grove 105020003, type digital : https://www.gotronic.fr/art-module-vibreur-grove-105020003-19026.htm
-- Enceinte bluetooth
+- Un buzzer Grove 107020000, type digital : https://www.gotronic.fr/art-module-buzzer-grove-107020000-19009.htm
 
 ----
 
