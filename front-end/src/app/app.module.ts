@@ -3,18 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MapboxComponent } from './mapbox/mapbox.component';
-import { GmapsComponent } from './gmaps/gmaps.component';
+import { MenuComponent } from './menu/menu.component';
+import { CaptorsComponent } from './captors/captors.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material';
+import {HttpClientModule} from '@angular/common/http';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapboxComponent,
-    GmapsComponent
+    MenuComponent,
+    CaptorsComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
