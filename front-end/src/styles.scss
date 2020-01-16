@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 $theme-colors: (
-  "primary": #2980b9,
+  "primary": #3f51b5,
   "success": #27ae60,
   "danger": #c0392b,
   "warning": #e67e22,
@@ -10,14 +10,11 @@ $theme-colors: (
 
 @import "~bootstrap/scss/bootstrap";
 @import "assets/angular-material-theme.scss";
+@import 'assets/animate.css';
 
 html, body{
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-}
-.container-fluid {
   width: 100%;
   height: 100%;
 }

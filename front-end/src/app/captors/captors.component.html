@@ -1,2 +1,53 @@
-<p>captors works!</p>
-<button type="button" class="btn btn-primary" (click)="send()">Send</button>
+<div class="card m-4" *ngFor="let item of devices | async; let i = index">
+  <h5 class="card-header">Device {{ i +1 }} :
+    <span style="color: red" *ngIf="item.fall">Falled</span>
+    <span style="color: green" *ngIf="!item.fall">Not fall</span>
+  </h5>
+
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col">
+        <ngx-gauge foregroundColor="black"
+                   type="full"
+                   [value]="item.co2"
+                   label="CO²"
+                   append="unité?">
+        </ngx-gauge>
+      </div>
+
+      <div class="col">
+        <ngx-gauge foregroundColor="black"
+                   type="arch"
+                   [value]="item.temperature"
+                   label="Temperature"
+                   append="Degrees">
+        </ngx-gauge>
+      </div>
+
+      <div class="col">
+        <ngx-gauge foregroundColor="black"
+                   type="full"
+                   [value]="item.humidity"
+                   label="Humidity"
+                   append="%">
+        </ngx-gauge>
+      </div>
+
+      <div class="col">
+        <ngx-gauge foregroundColor="black"
+                   type="arch"
+                   [value]="item.decibel"
+                   label="Decibel"
+                   append="dB">
+        </ngx-gauge>
+      </div>
+
+      <div class="col-12">
+        <label class="mr-2">Actual profile : {{item.profile.name}}</label>
+        <a routerLink="/menu/configurations" class="btn btn-primary">Configure profile</a>
+      </div>
+
+    </div>
+  </div>
+</div>

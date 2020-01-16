@@ -4,8 +4,14 @@
 
 export const environment = {
   production: false,
-  mapbox: {
-    accessToken: 'pk.eyJ1IjoibGV4YWxpcyIsImEiOiJjazFxaXF0NnMxMGZ4M29vaWhrbDBoZHE1In0.463iluVXWu1foE9Op3hNgg'
+  firebaseConfig: {
+    apiKey: 'AIzaSyDUmFCOOhx6LSie_71axzfBFrJpKxtMVuE',
+    authDomain: 'black-box-a815e.firebaseapp.com',
+    databaseURL: 'https://black-box-a815e.firebaseio.com',
+    projectId: 'black-box-a815e',
+    storageBucket: 'black-box-a815e.appspot.com',
+    messagingSenderId: '123668368731',
+    appId: '1:123668368731:web:454ee6b3935dab6f339e7e'
   }
 };
 

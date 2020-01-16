@@ -6,9 +6,14 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CaptorsComponent } from './captors/captors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material';
+import {MatChipsModule, MatTabsModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {environment} from '../environments/environment';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {NgxGaugeModule} from 'ngx-gauge';
 
 @NgModule({
   declarations: [
@@ -22,9 +27,13 @@ import { ConfigurationComponent } from './configuration/configuration.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    MatChipsModule,
+    NgxGaugeModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

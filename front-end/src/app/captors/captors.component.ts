@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DevicesService} from '../shared/services/devices.service';
-import {Device} from '../shared/models/device';
+import {AngularFireDatabase} from '@angular/fire/database';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-captors',
@@ -9,17 +9,15 @@ import {Device} from '../shared/models/device';
 })
 export class CaptorsComponent implements OnInit {
 
-  device: Device;
+  //devices: any;
+  devices: Observable<any>;
 
-  constructor(private devicesService: DevicesService) { }
-
-  ngOnInit() {
+  constructor(db: AngularFireDatabase) {
+    //db.list('/').valueChanges().subscribe( devices => this.devices = devices);
+    this.devices = db.list('/').valueChanges();
   }
 
-  send() {
-    console.log('je suis la');
-    this.device = new Device('ouiiiiiiiii');
-    this.devicesService.giveCaptor(this.device);
+  ngOnInit() {
   }
 
 }

@@ -12,8 +12,12 @@ export class MenuComponent implements OnInit {
   constructor() {
     this.navLinks = [
       {
-        label: 'Capteurs',
-        path: `captors`
+        label: 'Devices',
+        path: `devices`
+      },
+      {
+        label: 'Configurations',
+        path: `configurations`
       }
     ];
   }
