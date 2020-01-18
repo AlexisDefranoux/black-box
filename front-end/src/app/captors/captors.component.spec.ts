@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapboxComponent } from './mapbox.component';
+import { CaptorsComponent } from './captors.component';
 
-describe('MapboxComponent', () => {
-  let component: MapboxComponent;
-  let fixture: ComponentFixture<MapboxComponent>;
+describe('CaptorsComponent', () => {
+  let component: CaptorsComponent;
+  let fixture: ComponentFixture<CaptorsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapboxComponent ]
+      declarations: [ CaptorsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapboxComponent);
+    fixture = TestBed.createComponent(CaptorsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
