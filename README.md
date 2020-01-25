@@ -10,13 +10,9 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 - Rihab Zaafouri
 - Anthony Lopes
 
-## Diagramme de GANTT
-
-![](https://i.imgur.com/JGRhCEe.png)
-
 ## Modélisation de l'objet
 
-![](https://i.imgur.com/ZTfQTC5.png)
+![](https://i.imgur.com/llIrJiE.png)
 
 ## Architecture matérielle
 
@@ -24,7 +20,7 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ## Architecture logicielle
 
-![](https://i.imgur.com/ywfmTUy.png)
+![](https://i.imgur.com/Y0LGTeC.png)
 
 ## Scénarios
 
@@ -55,3 +51,33 @@ Voici des exemples de scénario possible avec des black box :
 - Une Led 8 mm RGB Grove V2.0 104020048, type digital : https://www.gotronic.fr/art-led-8-mm-rgb-grove-v2-0-104020048-27067.htm
 - Un Module vibreur Grove 105020003, type digital : https://www.gotronic.fr/art-module-vibreur-grove-105020003-19026.htm
 - Un buzzer Grove 107020000, type digital : https://www.gotronic.fr/art-module-buzzer-grove-107020000-19009.htm
+
+
+# Installation
+
+## Prérequis
+
+Version minimum de :
+* `npm 6`
+* `node 12`
+
+## Front-end : Angular
+
+1. A la racine du projet `npm install`
+2. Lancer le projet `npm start`
+3. L'interface est disponible sur le port `4200`
+
+## Orchestrateur : Node-Red
+
+1. Installer node-red `npm install node-red`
+3. Lancer le serveur `node-red`
+2. Ajouter la dépendence `node-red-contrib-firebase`
+3. Importer les flows du projet
+5. Sur l'interface du port `1880`, configurer l'adresse ip du broker
+
+## Broker : emqx
+
+1. Dans `emqx/bin`, lancez `emqx start`
+2. Une interface est disponible sur le port `18083` sous le pseudo `admin` et le mot de passe `public`
+3. Pour stopper le broker, allez dans `emqx/bin` et lancez `emqx stop`
+
