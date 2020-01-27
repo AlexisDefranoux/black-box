@@ -8,7 +8,7 @@
 
     <div class="row text-center">
       <div class="col">
-        <ngx-gauge type="full"
+        <ngx-gauge type="arch"
                    [value]="device?.co2"
                    label="Air quality"
                    min="0"
@@ -30,7 +30,7 @@
 
       <div class="col text-center">
         <ngx-gauge foregroundColor="black"
-                   type="full"
+                   type="arch"
                    [value]="device?.humidity"
                    label="Humidity"
                    min="20"
@@ -55,7 +55,7 @@
                    type="arch"
                    [value]="device?.accelerometer[0]"
                    label="X accelerometer"
-                   min="0"
+                   min="-20000"
                    max="20000"
                    append="m/s">
         </ngx-gauge>
@@ -66,7 +66,7 @@
                    type="arch"
                    [value]="device?.accelerometer[1]"
                    label="Y accelerometer"
-                   min="0"
+                   min="-20000"
                    max="20000"
                    append="m/s">
         </ngx-gauge>
@@ -77,7 +77,7 @@
                    type="arch"
                    [value]="device?.accelerometer[2]"
                    label="Z accelerometer"
-                   min="0"
+                   min="-20000"
                    max="20000"
                    append="m/s">
         </ngx-gauge>
