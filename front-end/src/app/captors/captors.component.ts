@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AngularFireDatabase} from '@angular/fire/database';
-import {Observable} from 'rxjs';
+import {Device} from '../shared/models/device';
 
 @Component({
   selector: 'app-captors',
@@ -9,12 +9,10 @@ import {Observable} from 'rxjs';
 })
 export class CaptorsComponent implements OnInit {
 
-  //devices: any;
-  devices: Observable<any>;
+  device: Device;
 
   constructor(db: AngularFireDatabase) {
-    //db.list('/').valueChanges().subscribe( devices => this.devices = devices);
-    this.devices = db.list('/').valueChanges();
+    db.list('/').valueChanges().subscribe( device => this.device = new Device(device[0]));
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
 import {AngularFireDatabase} from '@angular/fire/database';
+import {Profile} from '../shared/models/profile';
 
 @Component({
   selector: 'app-configuration',
@@ -9,10 +9,10 @@ import {AngularFireDatabase} from '@angular/fire/database';
 })
 export class ConfigurationComponent implements OnInit {
 
-  items: Observable<any[]>;
+  profile: Profile;
 
   constructor(db: AngularFireDatabase) {
-    this.items = db.list('device-1/profile').valueChanges();
+    db.list('/device-1').valueChanges().subscribe(profile => this.profile = new Profile(profile[2]));
   }
 
   ngOnInit() {

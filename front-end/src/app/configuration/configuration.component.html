@@ -1,7 +1,26 @@
-<p>configuration works!</p>
+<div class="card m-4">
+  <h5 class="card-header">Device 1 :
+  </h5>
+  <div class="card-body">
+
+    <div class="row text-center">
+      <div class="col">
+
+<h1>Select a config</h1>
+<p>Saved config</p>
+<p>Custom config</p>
+
+
+
 <p>captors works!</p>
+<h1>{{ profile?.name }}</h1>
 <ul>
-  <li *ngFor="let item of items | async">
-    {{ item }}
+  <li>
+    {{ profile?.minCo2 }}
+  </li>
+  <li>
+    {{ profile?.maxCo2 }}
   </li>
 </ul>
+
+<mat-slider min="0" max="100" thumbLabel style="width: 500px"></mat-slider>

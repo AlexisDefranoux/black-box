@@ -1,4 +1,5 @@
 import {Profile} from './profile';
+import {convertSoundInDecibel} from '../utils/convert';
 
 export class Device {
   co2: number;
@@ -10,10 +11,10 @@ export class Device {
 
   constructor(device: any = {}) {
     this.co2 = device.co2;
-    this.decibel = device.decibel;
+    this.decibel = convertSoundInDecibel(device.sound);
     this.fall = device.fall;
-    this.humidity = device.humidity;
-    this.temperature = device.temperature;
+    this.humidity = device.temperature[1];
+    this.temperature = device.temperature[2];
     this.profile = device.profile;
   }
 }

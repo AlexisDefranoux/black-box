@@ -1,53 +1,59 @@
-<div class="card m-4" *ngFor="let item of devices | async; let i = index">
-  <h5 class="card-header">Device {{ i +1 }} :
-    <span style="color: red" *ngIf="item.fall">Falled</span>
-    <span style="color: green" *ngIf="!item.fall">Not fall</span>
+<div class="card m-4">
+  <h5 class="card-header">Device 1 :
+    <span style="color: red" *ngIf="device?.fall">Falled</span>
+    <span style="color: green" *ngIf="!device?.fall">Not fall</span>
   </h5>
 
   <div class="card-body">
 
-    <div class="row">
+    <div class="row text-center">
       <div class="col">
         <ngx-gauge foregroundColor="black"
                    type="full"
-                   [value]="item.co2"
+                   [value]="device?.co2"
                    label="CO²"
                    append="unité?">
         </ngx-gauge>
       </div>
 
-      <div class="col">
+      <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="arch"
-                   [value]="item.temperature"
+                   [value]="device?.temperature"
                    label="Temperature"
-                   append="Degrees">
+                   min="0"
+                   max="50"
+                   append="°C">
         </ngx-gauge>
       </div>
 
-      <div class="col">
+      <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="full"
-                   [value]="item.humidity"
+                   [value]="device?.humidity"
                    label="Humidity"
+                   min="20"
+                   max="90"
                    append="%">
         </ngx-gauge>
       </div>
 
-      <div class="col">
+      <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="arch"
-                   [value]="item.decibel"
+                   [value]="device?.decibel"
                    label="Decibel"
+                   min="0"
+                   max="130"
                    append="dB">
         </ngx-gauge>
       </div>
 
       <div class="col-12">
-        <label class="mr-2">Actual profile : {{item.profile.name}}</label>
+        <label class="mr-2">Actual profile : {{device?.profile.name}}</label>
         <a routerLink="/menu/configurations" class="btn btn-primary">Configure profile</a>
       </div>
 
     </div>
   </div>
-</div>
+
