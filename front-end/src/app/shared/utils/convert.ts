@@ -1,4 +1,4 @@
 
 export function convertSoundInDecibel(sound) {
-  return (sound * 20) / 200;
+  return (sound * 20) / 100;
 }

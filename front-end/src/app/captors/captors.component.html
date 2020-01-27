@@ -1,18 +1,19 @@
 <div class="card m-4">
-  <h5 class="card-header">Device 1 :
-    <span style="color: red" *ngIf="device?.fall">Falled</span>
-    <span style="color: green" *ngIf="!device?.fall">Not fall</span>
+  <h5 class="card-header">Sensors
+<!--    <span style="color: red" *ngIf="device?.fall">Falled</span>-->
+<!--    <span style="color: green" *ngIf="!device?.fall">Not fall</span>-->
   </h5>
 
   <div class="card-body">
 
     <div class="row text-center">
       <div class="col">
-        <ngx-gauge foregroundColor="black"
-                   type="full"
+        <ngx-gauge type="full"
                    [value]="device?.co2"
-                   label="CO²"
-                   append="unité?">
+                   label="Air quality"
+                   min="0"
+                   max="10"
+                   [thresholds]="thresholdConfig">
         </ngx-gauge>
       </div>
 
@@ -49,11 +50,75 @@
         </ngx-gauge>
       </div>
 
-      <div class="col-12">
-        <label class="mr-2">Actual profile : {{device?.profile.name}}</label>
-        <a routerLink="/menu/configurations" class="btn btn-primary">Configure profile</a>
+      <div class="col text-center">
+        <ngx-gauge foregroundColor="black"
+                   type="arch"
+                   [value]="device?.accelerometer[0]"
+                   label="X accelerometer"
+                   min="0"
+                   max="20000"
+                   append="m/s">
+        </ngx-gauge>
       </div>
 
+      <div class="col text-center">
+        <ngx-gauge foregroundColor="black"
+                   type="arch"
+                   [value]="device?.accelerometer[1]"
+                   label="Y accelerometer"
+                   min="0"
+                   max="20000"
+                   append="m/s">
+        </ngx-gauge>
+      </div>
+
+      <div class="col text-center">
+        <ngx-gauge foregroundColor="black"
+                   type="arch"
+                   [value]="device?.accelerometer[2]"
+                   label="Z accelerometer"
+                   min="0"
+                   max="20000"
+                   append="m/s">
+        </ngx-gauge>
+      </div>
     </div>
   </div>
+</div>
 
+<div class="card m-4">
+  <h5 class="card-header">Actuators</h5>
+
+  <div class="card-body">
+
+    <div class="row text-center">
+      <div class="col">
+
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Vibrator :
+            <span class="badge badge-danger" *ngIf="device?.vibrator">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.vibrator">Disabled</span>
+          </li>
+          <li class="list-group-item">Buzzer :
+            <span class="badge badge-danger" *ngIf="device?.buzzer">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.buzzer">Disabled</span>
+          </li>
+          <li class="list-group-item">LED :
+            <span class="badge badge-primary" *ngIf="device?.led == 'blue'">Blue</span>
+            <span class="badge badge-danger" *ngIf="device?.led == 'red'">Red</span>
+            <span class="badge badge-secondary" *ngIf="device?.led == 'off'">Off</span>
+            <span class="badge badge-green" *ngIf="device?.led == 'green'">Green</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-12 text-center">
+    <label class="mr-2">Actual profile : {{device?.profile.name}}</label>
+    <a routerLink="/menu/configurations" class="btn btn-primary">Configure profile</a>
+  </div>
+</div>

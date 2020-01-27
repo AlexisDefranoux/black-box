@@ -10,6 +10,11 @@ import {Device} from '../shared/models/device';
 export class CaptorsComponent implements OnInit {
 
   device: Device;
+  thresholdConfig = {
+    0: {color: 'green'},
+    4: {color: 'orange'},
+    7: {color: 'red'}
+  };
 
   constructor(db: AngularFireDatabase) {
     db.list('/').valueChanges().subscribe( device => this.device = new Device(device[0]));

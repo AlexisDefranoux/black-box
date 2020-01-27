@@ -12,11 +12,11 @@ export class MenuComponent implements OnInit {
   constructor() {
     this.navLinks = [
       {
-        label: 'Devices',
+        label: 'Device',
         path: `devices`
       },
       {
-        label: 'Configurations',
+        label: 'Configuration',
         path: `configurations`
       }
     ];
