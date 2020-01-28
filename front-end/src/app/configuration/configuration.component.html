@@ -1,26 +1,147 @@
 <div class="card m-4">
-  <h5 class="card-header">Device 1 :
+  <h5 class="card-header">Actual profile : <span class="badge badge-primary">{{profile?.name}}</span></h5>
+  <div class="card-body">
+
+    <div class="row justify-content-between">
+      <div class="col">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Minimum temperature :
+            <span class="badge badge-primary badge-pill">{{ profile?.minTemperature }}</span>
+          </li>
+          <li class="list-group-item">Maximum temperature :
+            <span class="badge badge-primary badge-pill">{{ profile?.maxTemperature }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="list-group list-group-horizontal justify-content-center">
+          <li class="list-group-item">Minimum sound :
+            <span class="badge badge-primary badge-pill">{{ profile?.minSound }}</span>
+          </li>
+          <li class="list-group-item">Maximum sound :
+            <span class="badge badge-primary badge-pill">{{ profile?.maxSound }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="list-group list-group-horizontal justify-content-end">
+          <li class="list-group-item">Minimum co2 :
+            <span class="badge badge-primary badge-pill">{{ profile?.minCo2 }}</span>
+          </li>
+          <li class="list-group-item">Maximum co2 :
+            <span class="badge badge-primary badge-pill">{{ profile?.maxCo2 }}</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="card m-4">
+  <h5 class="card-header">
+    <mat-form-field>
+      <mat-label>Select profile</mat-label>
+      <mat-select [(value)]="selectedProfile">
+        <mat-option *ngFor="let profile of profiles" [value]="profile">
+          {{profile.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button class="btn btn-secondary mx-2" (click)="updateProfile()">Validate</button>
+  </h5>
+
+  <div class="card-body">
+
+    <div class="row justify-content-between">
+      <div class="col">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Minimum temperature :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.minTemperature }}</span>
+          </li>
+          <li class="list-group-item">Maximum temperature :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.maxTemperature }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="list-group list-group-horizontal justify-content-center">
+          <li class="list-group-item">Minimum sound :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.minSound }}</span>
+          </li>
+          <li class="list-group-item">Maximum sound :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.maxSound }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="list-group list-group-horizontal justify-content-end">
+          <li class="list-group-item">Minimum co2 :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.minCo2 }}</span>
+          </li>
+          <li class="list-group-item">Maximum co2 :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.maxCo2 }}</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="card m-4">
+  <h5 class="card-header">Custom profile
   </h5>
   <div class="card-body">
 
-    <div class="row text-center">
-      <div class="col">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Profile name" [(ngModel)]="customProfile.name">
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-slide-toggle [(ngModel)]="customProfile.checkFall">Check a fall ?</mat-slide-toggle>
+      </div>
+    </div>
 
-<h1>Select a config</h1>
-<p>Saved config</p>
-<p>Custom config</p>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Minimum temperature :</label><mat-slider [(value)]="customProfile.minTemperature" min="0" max="50" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+      <div class="col-md-6">
+        <label>Maximum temperature :</label><mat-slider [(value)]="customProfile.maxTemperature" min="0" max="50" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-md-6">
+        <label>Minimum sound :</label><mat-slider min="0" max="1000" [(value)]="customProfile.minSound" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+      <div class="col-md-6">
+        <label>Maximum sound :</label><mat-slider min="0" max="1000" [(value)]="customProfile.maxSound" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-md-6">
+        <label>Minimum co2 :</label><mat-slider [(value)]="customProfile.minCo2" min="0" max="10" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+      <div class="col-md-6">
+        <label>Maximum co2 :</label><mat-slider [(value)]="customProfile.maxCo2" min="0" max="10" thumbLabel style="width: 100%"></mat-slider>
+      </div>
+    </div>
 
-<p>captors works!</p>
-<h1>{{ profile?.name }}</h1>
-<ul>
-  <li>
-    {{ profile?.minCo2 }}
-  </li>
-  <li>
-    {{ profile?.maxCo2 }}
-  </li>
-</ul>
+    <div class="row">
+      <div class="col-12 text-center">
+        <button class="btn btn-secondary" (click)="addCustomProfile()">Create and set</button>
+      </div>
+    </div>
 
-<mat-slider min="0" max="100" thumbLabel style="width: 500px"></mat-slider>
+  </div>
+</div>

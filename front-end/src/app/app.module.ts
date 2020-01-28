@@ -14,6 +14,12 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {NgxGaugeModule} from 'ngx-gauge';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -22,18 +28,24 @@ import {NgxGaugeModule} from 'ngx-gauge';
     CaptorsComponent,
     ConfigurationComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatTabsModule,
-        HttpClientModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule,
-        MatChipsModule,
-        NgxGaugeModule,
-        MatSliderModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    MatChipsModule,
+    NgxGaugeModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatInputModule,
+    FormsModule,
+    MatSnackBarModule
+  ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })

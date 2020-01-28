@@ -109,6 +109,9 @@
             <span class="badge badge-secondary" *ngIf="device?.led == 'off'">Off</span>
             <span class="badge badge-green" *ngIf="device?.led == 'green'">Green</span>
           </li>
+          <li class="list-group-item">
+            <mat-slide-toggle [(ngModel)]="fall" (change)="updateProfile()">Fall ?</mat-slide-toggle>
+          </li>
         </ul>
 
       </div>
@@ -119,6 +122,6 @@
 <div class="row mt-4">
   <div class="col-12 text-center">
     <label class="mr-2">Actual profile : {{device?.profile.name}}</label>
-    <a routerLink="/menu/configurations" class="btn btn-primary">Configure profile</a>
+    <a routerLink="/menu/configurations" class="btn btn-secondary">Configure profile</a>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {Device} from '../shared/models/device';
 
@@ -15,12 +15,22 @@ export class CaptorsComponent implements OnInit {
     4: {color: 'orange'},
     7: {color: 'red'}
   };
+  fall: boolean;
+
+  itemRef: any;
 
   constructor(db: AngularFireDatabase) {
-    db.list('/').valueChanges().subscribe( device => this.device = new Device(device[0]));
+    this.itemRef = db.object('/device-1');
+    this.itemRef.valueChanges().subscribe( device => {this.device = new Device(device), this.fall = this.device.fall});
   }
 
   ngOnInit() {
+  }
+
+  updateProfile() {
+    this.device.fall = this.fall;
+    this.itemRef.update(this.device);
+    console.log(this.device);
   }
 
 }
