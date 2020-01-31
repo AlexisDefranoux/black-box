@@ -3,7 +3,6 @@ import {AngularFireDatabase} from '@angular/fire/database';
 import {Profile} from '../shared/models/profile';
 import {Profiles} from '../shared/models/profiles';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-configuration',
@@ -16,7 +15,7 @@ export class ConfigurationComponent implements OnInit {
   profiles = Profiles.list;
   selectedProfile = Profiles.list[0];
   itemRef: any;
-  customProfile = new Profile();
+  customProfile = new Profile({name: '', minCo2: 0, maxCo2: 20, checkFall: false, minTemperature: 0, maxTemperature: 50, minSound: 0, maxSound: 1000});
 
   constructor(db: AngularFireDatabase, private snackBar: MatSnackBar) {
     this.itemRef = db.object('/device-1/profile');

@@ -12,8 +12,8 @@ export class CaptorsComponent implements OnInit {
   device: Device;
   thresholdConfig = {
     0: {color: 'green'},
-    4: {color: 'orange'},
-    7: {color: 'red'}
+    10: {color: 'orange'},
+    20: {color: 'red'}
   };
   fall: boolean;
 
