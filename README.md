@@ -20,7 +20,7 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ## Architecture logicielle
 
-![](https://i.imgur.com/Y0LGTeC.png)
+![](https://i.imgur.com/YQdCUHt.png)
 
 ## Scénarios
 
@@ -57,9 +57,8 @@ Voici des exemples de scénario possible avec des black box :
 
 ## Prérequis
 
-Version minimum de :
-* `npm 6`
-* `node 12`
+* `npm v6`
+* `node v12`
 
 ## Front-end : Angular
 
@@ -73,11 +72,4 @@ Version minimum de :
 3. Lancer le serveur `node-red`
 2. Ajouter la dépendence `node-red-contrib-firebase`
 3. Importer les flows du projet
-5. Sur l'interface du port `1880`, configurer l'adresse ip du broker
-
-## Broker : emqx
-
-1. Dans `emqx/bin`, lancez `emqx start`
-2. Une interface est disponible sur le port `18083` sous le pseudo `admin` et le mot de passe `public`
-3. Pour stopper le broker, allez dans `emqx/bin` et lancez `emqx stop`
 
