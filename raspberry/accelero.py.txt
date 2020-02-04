@@ -1,0 +1,14 @@
+from LSM6DS3 import *
+from time import sleep
+
+mySensor = LSM6DS3()
+
+while True:
+    print(mySensor.readRawAccelX())
+    time.sleep(1)
+    print(mySensor.readRawAccelY())
+    time.sleep(1)
+    print(mySensor.readRawAccelZ())
+        #mySensor.readRawGyroX())
+    time.sleep(1)
+
