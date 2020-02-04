@@ -1,8 +1,5 @@
 <div class="card m-4">
-  <h5 class="card-header">Sensors
-<!--    <span style="color: red" *ngIf="device?.fall">Falled</span>-->
-<!--    <span style="color: green" *ngIf="!device?.fall">Not fall</span>-->
-  </h5>
+  <h5 class="card-header">Sensors</h5>
 
   <div class="card-body">
 
@@ -12,7 +9,7 @@
                    [value]="device?.co2"
                    label="Air quality"
                    min="0"
-                   max="20"
+                   max="40"
                    [thresholds]="thresholdConfig">
         </ngx-gauge>
       </div>
@@ -108,9 +105,12 @@
             <span class="badge badge-danger" *ngIf="device?.led == 'red'">Red</span>
             <span class="badge badge-secondary" *ngIf="device?.led == 'off'">Off</span>
             <span class="badge badge-green" *ngIf="device?.led == 'green'">Green</span>
+            <span class="badge badge-secondary" *ngIf="device?.led == 'purple'">Off</span>
+            <span class="badge badge-yellow" *ngIf="device?.led == 'yellow'">Green</span>
           </li>
-          <li class="list-group-item">
-            <mat-slide-toggle [(ngModel)]="fall" (change)="updateProfile()">Fall ?</mat-slide-toggle>
+          <li class="list-group-item">Buzzer :
+            <span class="badge badge-danger" *ngIf="device?.fall">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.fall">Disabled</span>
           </li>
         </ul>
 
