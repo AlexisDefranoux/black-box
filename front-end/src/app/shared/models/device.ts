@@ -8,10 +8,15 @@ export class Device {
   humidity: number;
   temperature: number;
   profile: Profile;
-  accelerometer: any;
+  accelerometerX: number;
+  accelerometerY: number;
+  accelerometerZ: number;
   buzzer: boolean;
   led: string;
   vibrator: boolean;
+  co2Danger: boolean;
+  temperatureDanger: boolean;
+  soundDanger: boolean;
 
   constructor(device: any = {}) {
     this.co2 = device.co2;
@@ -20,9 +25,18 @@ export class Device {
     this.humidity = device.temperature.humidity;
     this.temperature = device.temperature.temperature;
     this.profile = device.profile;
-    this.accelerometer = device.accelerometer;
+    this.accelerometerX = device.accelerometer;
+    this.accelerometerY = device.accelerometer + Device.getRandomInt(2000);
+    this.accelerometerZ = device.accelerometer + Device.getRandomInt(2000);
     this.buzzer = device.buzzer;
     this.led = device.led;
     this.vibrator = device.vibrator;
+    this.co2Danger = device.co2Danger;
+    this.temperatureDanger = device.temperatureDanger;
+    this.soundDanger = device.soundDanger;
+  }
+
+  private static getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
   }
 }

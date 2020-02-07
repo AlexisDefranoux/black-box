@@ -2,6 +2,16 @@
   <h5 class="card-header">Actual profile : <span class="badge badge-primary">{{profile?.name}}</span></h5>
   <div class="card-body">
 
+    <div class="row mb-3">
+      <div class="col">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Email :
+            <span class="badge badge-primary badge-pill">{{ profile?.email }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="row justify-content-between">
       <div class="col">
         <ul class="list-group list-group-horizontal">
@@ -95,14 +105,19 @@
 </div>
 
 <div class="card m-4">
-  <h5 class="card-header">Custom profile
+  <h5 class="card-header">Create a custom profile
   </h5>
   <div class="card-body">
 
     <div class="row">
       <div class="col-md-6">
-        <mat-form-field class="example-full-width">
+        <mat-form-field >
           <input matInput placeholder="Profile name" [(ngModel)]="customProfile.name">
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <input matInput placeholder="Email" [(ngModel)]="customProfile.email">
         </mat-form-field>
       </div>
     </div>

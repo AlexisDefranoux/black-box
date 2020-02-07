@@ -7,30 +7,19 @@ import {Device} from '../shared/models/device';
   templateUrl: './captors.component.html',
   styleUrls: ['./captors.component.scss']
 })
-export class CaptorsComponent implements OnInit {
+export class CaptorsComponent {
 
   device: Device;
   thresholdConfig = {
     0: {color: 'green'},
-    10: {color: 'orange'},
-    20: {color: 'red'}
+    20: {color: 'orange'},
+    30: {color: 'red'}
   };
   fall: boolean;
-
   itemRef: any;
 
   constructor(db: AngularFireDatabase) {
     this.itemRef = db.object('/device-1');
-    this.itemRef.valueChanges().subscribe( device => {this.device = new Device(device), this.fall = this.device.fall});
+    this.itemRef.valueChanges().subscribe( device => {this.device = new Device(device); this.fall = this.device.fall});
   }
-
-  ngOnInit() {
-  }
-
-  updateProfile() {
-    this.device.fall = this.fall;
-    this.itemRef.update(this.device);
-    console.log(this.device);
-  }
-
 }

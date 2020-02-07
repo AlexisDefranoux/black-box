@@ -50,10 +50,10 @@
       <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="arch"
-                   [value]="device?.accelerometer[0]"
+                   [value]="device?.accelerometerX"
                    label="X accelerometer"
-                   min="-20000"
-                   max="20000"
+                   min="-30000"
+                   max="30000"
                    append="m/s">
         </ngx-gauge>
       </div>
@@ -61,10 +61,10 @@
       <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="arch"
-                   [value]="device?.accelerometer[1]"
+                   [value]="device?.accelerometerY"
                    label="Y accelerometer"
-                   min="-20000"
-                   max="20000"
+                   min="-30000"
+                   max="30000"
                    append="m/s">
         </ngx-gauge>
       </div>
@@ -72,10 +72,10 @@
       <div class="col text-center">
         <ngx-gauge foregroundColor="black"
                    type="arch"
-                   [value]="device?.accelerometer[2]"
+                   [value]="device?.accelerometerZ"
                    label="Z accelerometer"
-                   min="-20000"
-                   max="20000"
+                   min="-30000"
+                   max="30000"
                    append="m/s">
         </ngx-gauge>
       </div>
@@ -108,9 +108,37 @@
             <span class="badge badge-secondary" *ngIf="device?.led == 'purple'">Off</span>
             <span class="badge badge-yellow" *ngIf="device?.led == 'yellow'">Green</span>
           </li>
-          <li class="list-group-item">Buzzer :
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card m-4">
+  <h5 class="card-header">Dangers detected</h5>
+
+  <div class="card-body">
+
+    <div class="row text-center">
+      <div class="col">
+
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Fall :
             <span class="badge badge-danger" *ngIf="device?.fall">Activated</span>
             <span class="badge badge-success" *ngIf="!device?.fall">Disabled</span>
+          </li>
+          <li class="list-group-item">Gaz danger :
+            <span class="badge badge-danger" *ngIf="device?.co2Danger">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.co2Danger">Disabled</span>
+          </li>
+          <li class="list-group-item">Temperature danger :
+            <span class="badge badge-danger" *ngIf="device?.temperatureDanger">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.temperatureDanger">Disabled</span>
+          </li>
+          <li class="list-group-item">Sound danger :
+            <span class="badge badge-danger" *ngIf="device?.soundDanger">Activated</span>
+            <span class="badge badge-success" *ngIf="!device?.soundDanger">Disabled</span>
           </li>
         </ul>
 
