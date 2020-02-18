@@ -20,7 +20,7 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 ## Architecture logicielle
 
-![](https://i.imgur.com/YQdCUHt.png)
+![](https://i.imgur.com/WelBkxK.png)
 
 ## Scénarios
 
@@ -30,9 +30,9 @@ Voici des exemples de scénario possible avec des black box :
 
 - La black box peut aussi être posée sur une victime au sol, afin de la protégeant en avertissant les secours d'un danger comme le gaz explosif.
 
-- La black box, toujours porté autours de la taille du user, peut aussi prévenir d'une température extérieure trop élevé pour le pompier à l'aide d'un capteur de température .
+- La black box, toujours porté autours de la taille de l'utilisateur, peut aussi prévenir d'une température extérieure trop élevé pour le pompier à l'aide d'un capteur de température.
 
-- Chute d'une personne agé vivant seul -> envoie un mail automatiquement à un proche(grâce à l'accelerometre).
+- Lors de la chute d'une personne agé vivant seul, l'objet va détecter  la chute à l'aide de l'accéléromètre et enverra un mail automatiquement à un proche.
 
 - Prévenir les personne travaillant dans le batiment des fuite de gaz, chute, etc.
 
@@ -74,4 +74,3 @@ Voici des exemples de scénario possible avec des black box :
 3. Lancer le serveur `node-red`
 2. Ajouter la dépendence `node-red-contrib-firebase`
 3. Importer les flows du projet
-
