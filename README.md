@@ -26,15 +26,15 @@ La black box est un projet visant à protéger les pompiers. C'est un petit boit
 
 Voici des exemples de scénario possible avec des black box :
 
-- Une fuite de gaz est présente dans le bâtiment. Cela menace les habitants et les pompiers lors de l'intervention des secours. En effet, il y a un risque d'explosion. Grâce à la black box porté dans une poche du pompier, l'appareil va détecter le gaz à l'aide de son capteur, puis va prévenir le pompier à l'aide d'une alerte sonore s'il n'y a pas trop de bruit, visuelle à l'aide d'une lumière, et d'une vibration à l'aide du vibreur.
+- Une fuite de gaz est présente dans un bâtiment. Cela menace les habitants et les pompiers lors de l'intervention des secours. En effet, il y a un risque d'explosion. Grâce à la black box porté dans une poche du pompier, l'appareil va détecter le gaz à l'aide de son capteur de gaz, puis va prévenir le pompier à l'aide d'une alerte sonore provenant du buzzer ,lumineuse provenant de la Led, et d'une vibration à l'aide du vibrateur.
 
 - La black box peut aussi être posée sur une victime au sol, afin de la protégeant en avertissant les secours d'un danger comme le gaz explosif.
 
-- La black box, toujours porté dans une poche extérieure, peut aussi prévenir d'une température extérieure trop élevé pour le pompier à l'aide d'un capteur de température, malgré sa combinaison de protection.
+- La black box, toujours porté autours de la taille du user, peut aussi prévenir d'une température extérieure trop élevé pour le pompier à l'aide d'un capteur de température .
 
-- Chute d'une personne agé vivant seul -> envoie un mail automatiquement à un proche.
+- Chute d'une personne agé vivant seul -> envoie un mail automatiquement à un proche(grâce à l'accelerometre).
 
-- Personne travaillant dans le batiment, fuite de gaz, chute, etc.
+- Prévenir les personne travaillant dans le batiment des fuite de gaz, chute, etc.
 
 ## Raspberry 
 
