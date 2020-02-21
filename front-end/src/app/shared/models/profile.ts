@@ -7,6 +7,7 @@ export class Profile {
   minSound: number;
   maxSound: number;
   email: string;
+  checkFall: boolean
 
   constructor(parameters: any = {}) {
     this.name = parameters.name;
@@ -17,5 +18,6 @@ export class Profile {
     this.minSound = parameters.minSound;
     this.maxSound = parameters.maxSound;
     this.email = parameters.email;
+    this.checkFall = parameters.checkFall;
   }
 }

@@ -3,10 +3,18 @@
   <div class="card-body">
 
     <div class="row mb-3">
-      <div class="col">
+      <div class="col-md-5">
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item">Email :
             <span class="badge badge-primary badge-pill">{{ profile?.email }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Check a fall :
+            <span class="badge badge-success badge-pill" *ngIf="profile?.checkFall">Activated</span>
+            <span class="badge badge-danger badge-pill" *ngIf="!profile?.checkFall">Disabled</span>
           </li>
         </ul>
       </div>
@@ -52,7 +60,7 @@
 
 <div class="card m-4">
   <h5 class="card-header">
-    <mat-form-field>
+    <mat-form-field class="col-3">
       <mat-label>Select profile</mat-label>
       <mat-select [(value)]="selectedProfile">
         <mat-option *ngFor="let profile of profiles" [value]="profile">
@@ -65,6 +73,24 @@
   </h5>
 
   <div class="card-body">
+
+    <div class="row mb-3">
+      <div class="col-md-5">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Email :
+            <span class="badge badge-primary badge-pill">{{ selectedProfile?.email }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Check a fall :
+            <span class="badge badge-success badge-pill" *ngIf="selectedProfile?.checkFall">Activated</span>
+            <span class="badge badge-danger badge-pill" *ngIf="!selectedProfile?.checkFall">Disabled</span>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="row justify-content-between">
       <div class="col">
@@ -110,15 +136,18 @@
   <div class="card-body">
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <mat-form-field >
           <input matInput placeholder="Profile name" [(ngModel)]="customProfile.name">
         </mat-form-field>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <mat-form-field>
           <input matInput placeholder="Email" [(ngModel)]="customProfile.email">
         </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-slide-toggle [(ngModel)]="customProfile.checkFall">Check a fall ?</mat-slide-toggle>
       </div>
     </div>
 
@@ -142,10 +171,10 @@
 
     <div class="row">
       <div class="col-md-6">
-        <label>Minimum co2 :</label><mat-slider [(value)]="customProfile.minCo2" min="0" max="10" thumbLabel style="width: 100%"></mat-slider>
+        <label>Minimum co2 :</label><mat-slider [(value)]="customProfile.minCo2" min="0" max="50" thumbLabel style="width: 100%"></mat-slider>
       </div>
       <div class="col-md-6">
-        <label>Maximum co2 :</label><mat-slider [(value)]="customProfile.maxCo2" min="0" max="10" thumbLabel style="width: 100%"></mat-slider>
+        <label>Maximum co2 :</label><mat-slider [(value)]="customProfile.maxCo2" min="0" max="50" thumbLabel style="width: 100%"></mat-slider>
       </div>
     </div>
 

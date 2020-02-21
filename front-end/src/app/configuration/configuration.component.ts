@@ -15,7 +15,7 @@ export class ConfigurationComponent implements OnInit {
   profiles = Profiles.list;
   selectedProfile = Profiles.list[0];
   itemRef: any;
-  customProfile = new Profile({name: '', email: '', minCo2: 0, maxCo2: 20, minTemperature: 0, maxTemperature: 50, minSound: 0, maxSound: 1000});
+  customProfile = new Profile({name: '', email: '', minCo2: 0, maxCo2: 20, minTemperature: 0, maxTemperature: 50, minSound: 0, maxSound: 1000, checkFall: false});
 
   constructor(db: AngularFireDatabase, private snackBar: MatSnackBar) {
     this.itemRef = db.object('/device-1/profile');
